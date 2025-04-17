@@ -8,6 +8,7 @@ export default function App() {
   function handleSubmit(e) {
     e.preventDefault();
     setTodos(todos.concat(todo));
+    setTodo("");
   }
   return (
     <div className="App">
