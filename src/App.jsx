@@ -1,4 +1,5 @@
 import Todo from "./components/Todo";
+import Header from "./components/Header";
 import { useState } from "react";
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
   }
   return (
     <div className="App">
+      <Header />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -20,9 +22,11 @@ export default function App() {
         />
         <button type="submit">ADD</button>
       </form>
-      <ul>
-        <Todo value={todos} />
-      </ul>
+      <div class="todos">
+        {todos.map((item, index) => (
+          <Todo data={item} key={index} />
+        ))}
+      </div>
     </div>
   );
 }
