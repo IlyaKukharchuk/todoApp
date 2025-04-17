@@ -11,7 +11,7 @@ export default function App() {
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
         />
-        <button type="submit">add</button>
+        <button type="submit">ADD</button>
       </form>
     </div>
   );
