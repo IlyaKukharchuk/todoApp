@@ -1,9 +1,14 @@
-export default function Todo({ value }) {
+import RemoveButton from "./buttons/RemoveButton";
+
+export default function Todo({ data }) {
   return (
-    <>
-      {value.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </>
+    <div className="todo_item">
+      <div className="item_data">
+        <p>{data}</p>
+      </div>
+      <div className="item-data">
+        <RemoveButton data={data} />
+      </div>
+    </div>
   );
 }
