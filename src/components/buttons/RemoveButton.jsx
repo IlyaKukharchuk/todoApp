@@ -1,3 +1,10 @@
-export default function RemoveButton({ key }) {
-  return <button className="btn">×</button>;
+export default function RemoveButton({ data }) {
+  function removeTodo() {
+    console.log(data);
+  }
+  return (
+    <button className="btn" onClick={removeTodo}>
+      ×
+    </button>
+  );
 }

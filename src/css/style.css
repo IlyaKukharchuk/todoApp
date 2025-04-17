@@ -3,8 +3,6 @@ body,
 #root {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  overscroll-behavior: none;
 }
 
 main {
@@ -16,7 +14,6 @@ main {
 }
 
 html {
-  position: fixed;
   height: auto !important;
 }
 
@@ -86,7 +83,7 @@ ol {
   justify-content: space-between;
   font-weight: bolder;
   color: #002423;
-  border: 3px solid #1d7471;
+  border: 2px solid #002423;
   background-color: #33cdc7;
   margin-top: 10px;
   padding: 15px 20px;
@@ -102,6 +99,7 @@ ol {
 
 .todos {
   padding: 0 10%;
+  height: 420px;
 }
 
 .btn {
@@ -112,6 +110,7 @@ ol {
   color: #fff;
   cursor: pointer;
   font-size: 26px;
+  font-weight: bolder;
   padding: 0 10px 5px 10px;
   text-align: center;
   transition: all 0.3s;
@@ -126,10 +125,38 @@ ol {
 }
 
 .btn:active {
-  transform: translateY(2px);
-  transition-duration: 0.35s;
+  transform: translateY(3px);
+  transition-duration: 0.15s;
 }
 
 .btn:hover {
   box-shadow: rgba(39, 174, 96, 0.2) 0 6px 12px;
+}
+
+.form {
+  background: #5ccdc9;
+  padding: 20px 20px;
+  border: 2px solid #002423;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 5px solid #002423;
+  background: #fff;
+  width: 100%;
+  outline: none;
+  color: rgba(0, 0, 0, 1);
+  padding-left: 15px;
+  margin: 0 30px 0 0;
+  border-radius: 1ch;
+}
+input:focus {
+  border-bottom: 5px solid;
 }
