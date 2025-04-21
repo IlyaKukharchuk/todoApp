@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 export default function Form({ todos, setTodos }) {
-  //const [todo, setTodo] = useState("");
-  const [todo, setTodo] = useState({ data: "", done: false });
+  const [todo, setTodo] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (todo.data != "") {
+    if (todo != "") {
+      console.log(todo);
       setTodos(todos.concat(todo));
-      setTodo({ data: "", done: false });
+      setTodo("");
     } else {
       alert("Put some task in an input field!");
     }
@@ -17,8 +17,8 @@ export default function Form({ todos, setTodos }) {
     <form onSubmit={handleSubmit} className="form">
       <input
         type="text"
-        value={todo.data}
-        onChange={(e) => setTodo({ data: e.target.value, done: false })}
+        value={todo}
+        onChange={(e) => setTodo(e.target.value)}
         placeholder="Enter todo item..."
       />
       <button type="submit" className="btn">

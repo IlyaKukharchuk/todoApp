@@ -15,7 +15,7 @@ export default function TodoItem({ item, todos, setTodos, index }) {
   return (
     <div className="todo_item" onClick={handleItemClick}>
       <div className="item_data">
-        <p className={isCompleted ? "completed" : ""}>{item.data}</p>
+        <p className={isCompleted ? "completed" : ""}>{item}</p>
       </div>
       <div className="item-data">
         <RemoveButton
