@@ -1,11 +1,10 @@
 export default function RemoveButton({ item, setTodos, todos, index }) {
   function removeTodo() {
-    console.log("Before: ", todos);
-    console.log("Clicked index: ", index);
-    const updatedTodos = todos.filter((_, index) => index !== index);
+    console.log("Todos Before: ", todos);
+    const updatedTodos = todos.filter((_, i) => i !== index);
+    console.log("Removed element id: ", index, "Data: ", item);
     setTodos(updatedTodos);
-
-    console.log("After: ", updatedTodos);
+    console.log("Todos After: ", todos);
   }
   return (
     <button className="btn" onClick={removeTodo}>
