@@ -1,21 +1,17 @@
 import RemoveButton from "./buttons/RemoveButton";
-import { useState } from "react";
 
 export default function TodoItem({ item, todos, setTodos, index }) {
-  const [isCompleted, setIsCompleted] = useState(false);
-
   function handleItemClick() {
-    if (isCompleted) {
-      setIsCompleted(false);
-    } else {
-      setIsCompleted(true);
-    }
+    const updatedTodos = todos.map((todo, i) =>
+      i === index ? { ...todo, done: !todo.done } : todo
+    );
+    setTodos(updatedTodos);
   }
 
   return (
-    <div className="todo_item" onClick={handleItemClick}>
-      <div className="item_data">
-        <p className={isCompleted ? "completed" : ""}>{item}</p>
+    <div className={item.done ? "todo_item completed" : "todo_item"}>
+      <div className="item_data" onClick={handleItemClick}>
+        <p>{item.data}</p>
       </div>
       <div className="item-data">
         <RemoveButton
