@@ -4,7 +4,7 @@
 
 ## Photo
 
-![alt text](image.png)
+![screenshot of the app](image-1.png)
 
 ## Stack
 
